@@ -1,4 +1,10 @@
 aws budgets create-budget \
-    --account-id $account \
-    --budget file://aws/budget.json \
-    --notifications-with-subscribers file://aws/budget-notifications-with-subscribers.json
+    --account-id 039673385640 \
+    --budget file:/workspace/aws-bootcamp-cruddur-202383/aws/budget.json \
+    --notifications-with-subscribers file:/workspace/aws-bootcamp-cruddur-202383/aws/budget-notification-with-subscribers.json
+
+
+    aws sns subscribe \
+    --topic-arn="arn:aws:sns:eu-west-1:039673385640:billing-alarm" \
+    --protocol=email \
+    --notification-endpoint=angmur112@gmail.com
