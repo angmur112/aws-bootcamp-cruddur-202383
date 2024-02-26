@@ -1,0 +1,4 @@
+aws budgets create-budget \
+    --account-id $account \
+    --budget file://aws/budget.json \
+    --notifications-with-subscribers file://aws/budget-notifications-with-subscribers.json
